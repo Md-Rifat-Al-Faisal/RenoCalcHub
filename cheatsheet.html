@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   The Contractor's Material Cheat Sheet - RenoCalcHub
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+  <link href="/favicon.png" rel="icon" type="image/png"/>
+  <style>
+   @media print {
+            .no-print { display: none !important; }
+            body { background: white; color: black; }
+            .print-border { border: 1px solid #ddd; }
+        }
+  </style>
+  <link href="/css/styles.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-slate-50 font-sans text-slate-800">
+  <nav class="bg-white border-b border-slate-200 sticky top-0 z-50 no-print">
+   <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
+    <a class="flex items-center group font-bold text-slate-900" href="/">
+     <i class="fa-solid fa-arrow-left mr-2 text-slate-400 group-hover:text-blue-600 transition">
+     </i>
+     Back to Calculators
+    </a>
+    <button class="bg-slate-900 hover:bg-slate-800 text-white text-sm font-bold py-2 px-4 rounded-full transition flex items-center" onclick="window.print()">
+     <i class="fa-solid fa-download mr-2">
+     </i>
+     Save as PDF
+    </button>
+   </div>
+  </nav>
+  <main class="max-w-4xl mx-auto px-4 py-12">
+   <div class="text-center mb-16">
+    <div class="inline-flex items-center justify-center h-16 w-16 bg-blue-100 text-blue-600 rounded-2xl mb-6 text-2xl shadow-sm">
+     <i class="fa-solid fa-clipboard-check">
+     </i>
+    </div>
+    <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4">
+     The Material Cheat Sheet
+    </h1>
+    <p class="text-slate-500 text-lg max-w-2xl mx-auto">
+     Stop guessing. Use these industry-standard waste factors and coverage formulas to order the right amount of material every time.
+    </p>
+   </div>
+   <div class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden mb-12 print-border">
+    <div class="bg-slate-50 px-8 py-6 border-b border-slate-200">
+     <h2 class="text-xl font-bold text-slate-900 flex items-center">
+      <i class="fa-solid fa-trash-can text-orange-500 mr-3">
+      </i>
+      Waste Factor Reference
+     </h2>
+     <p class="text-sm text-slate-500 mt-1">
+      Percentage of extra material to buy to account for cuts, breaks, and mistakes.
+     </p>
+    </div>
+    <div class="overflow-x-auto">
+     <table class="w-full text-left border-collapse">
+      <thead>
+       <tr class="bg-slate-50/50 text-xs uppercase tracking-wide text-slate-400 font-bold border-b border-slate-100">
+        <th class="px-8 py-4">
+         Material
+        </th>
+        <th class="px-8 py-4">
+         Standard Room
+        </th>
+        <th class="px-8 py-4">
+         Complex / Diagonal
+        </th>
+       </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100 text-sm">
+       <tr class="hover:bg-slate-50">
+        <td class="px-8 py-4 font-bold text-slate-900">
+         Paint (Walls)
+        </td>
+        <td class="px-8 py-4 text-emerald-600 font-bold">
+         5 - 10%
+        </td>
+        <td class="px-8 py-4 text-slate-600">
+         10 - 15% (Textured)
+        </td>
+       </tr>
+       <tr class="hover:bg-slate-50">
+        <td class="px-8 py-4 font-bold text-slate-900">
+         Laminate / Vinyl Plank
+        </td>
+        <td class="px-8 py-4 text-emerald-600 font-bold">
+         5 - 7%
+        </td>
+        <td class="px-8 py-4 text-slate-600">
+         10 - 15%
+        </td>
+       </tr>
+       <tr class="hover:bg-slate-50">
+        <td class="px-8 py-4 font-bold text-slate-900">
+         Ceramic Tile
+        </td>
+        <td class="px-8 py-4 text-emerald-600 font-bold">
+         10%
+        </td>
+        <td class="px-8 py-4 text-slate-600">
+         15 - 20%
+        </td>
+       </tr>
+       <tr class="hover:bg-slate-50">
+        <td class="px-8 py-4 font-bold text-slate-900">
+         Hardwood
+        </td>
+        <td class="px-8 py-4 text-emerald-600 font-bold">
+         7 - 10%
+        </td>
+        <td class="px-8 py-4 text-slate-600">
+         15%
+        </td>
+       </tr>
+       <tr class="hover:bg-slate-50">
+        <td class="px-8 py-4 font-bold text-slate-900">
+         Drywall
+        </td>
+        <td class="px-8 py-4 text-emerald-600 font-bold">
+         10 - 15%
+        </td>
+        <td class="px-8 py-4 text-slate-600">
+         20% (Lots of corners)
+        </td>
+       </tr>
+       <tr class="hover:bg-slate-50">
+        <td class="px-8 py-4 font-bold text-slate-900">
+         Concrete
+        </td>
+        <td class="px-8 py-4 text-emerald-600 font-bold">
+         5 - 10%
+        </td>
+        <td class="px-8 py-4 text-slate-600">
+         10% (Uneven ground)
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+   </div>
+   <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+    <div class="bg-blue-600 rounded-3xl p-8 text-white shadow-lg relative overflow-hidden">
+     <i class="fa-solid fa-fill-drip absolute -right-4 -bottom-4 text-8xl text-blue-500 opacity-50">
+     </i>
+     <h3 class="text-xl font-bold mb-4 relative z-10">
+      Paint Coverage Rule
+     </h3>
+     <div class="text-4xl font-extrabold mb-1 relative z-10">
+      350 - 400
+     </div>
+     <div class="text-blue-200 text-sm font-bold uppercase tracking-wide mb-6 relative z-10">
+      Sq. Ft per Gallon
+     </div>
+     <div class="bg-white/10 rounded-xl p-4 text-sm relative z-10 border border-white/20">
+      <p class="font-bold mb-1">
+       💡 The "Trim" Hack:
+      </p>
+      <p class="text-blue-100">
+       Assume 1 gallon of trim paint for every 6-8 gallons of wall paint.
+      </p>
+     </div>
+    </div>
+    <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm relative overflow-hidden print-border">
+     <h3 class="text-xl font-bold text-slate-900 mb-4">
+      The "Subtract" Rule
+     </h3>
+     <p class="text-slate-500 text-sm mb-6">
+      When calculating wall area,
+      <strong>
+       DO NOT
+      </strong>
+      subtract the exact size of doors and windows. You need the extra paint for jams and mistakes. Use these flat deductions instead:
+     </p>
+     <div class="flex items-center justify-between mb-4 pb-4 border-b border-slate-100">
+      <div class="flex items-center">
+       <i class="fa-solid fa-door-open text-slate-400 mr-3">
+       </i>
+       <span class="font-bold text-slate-700">
+        Door Deduction
+       </span>
+      </div>
+      <span class="font-bold text-slate-900 bg-slate-100 px-3 py-1 rounded-lg">
+       15 sq. ft.
+      </span>
+     </div>
+     <div class="flex items-center justify-between">
+      <div class="flex items-center">
+       <i class="fa-solid fa-border-all text-slate-400 mr-3">
+       </i>
+       <span class="font-bold text-slate-700">
+        Window Deduction
+       </span>
+      </div>
+      <span class="font-bold text-slate-900 bg-slate-100 px-3 py-1 rounded-lg">
+       10 sq. ft.
+      </span>
+     </div>
+    </div>
+   </div>
+   <div class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden print-border">
+    <div class="bg-slate-50 px-8 py-6 border-b border-slate-200">
+     <h2 class="text-xl font-bold text-slate-900 flex items-center">
+      <i class="fa-solid fa-truck-monster text-stone-500 mr-3">
+      </i>
+      Bulk Material Conversions
+     </h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-slate-100">
+     <div class="p-8 text-center hover:bg-slate-50 transition">
+      <div class="text-slate-400 text-xs font-bold uppercase tracking-wide mb-2">
+       Concrete (80lb Bag)
+      </div>
+      <div class="text-3xl font-extrabold text-slate-900 mb-2">
+       0.6
+      </div>
+      <div class="text-slate-500 text-sm">
+       Cubic Feet per Bag
+      </div>
+     </div>
+     <div class="p-8 text-center hover:bg-slate-50 transition">
+      <div class="text-slate-400 text-xs font-bold uppercase tracking-wide mb-2">
+       Mulch (1 Yard)
+      </div>
+      <div class="text-3xl font-extrabold text-slate-900 mb-2">
+       100
+      </div>
+      <div class="text-slate-500 text-sm">
+       Sq. Ft coverage @ 3" depth
+      </div>
+     </div>
+     <div class="p-8 text-center hover:bg-slate-50 transition">
+      <div class="text-slate-400 text-xs font-bold uppercase tracking-wide mb-2">
+       Gravel (1 Ton)
+      </div>
+      <div class="text-3xl font-extrabold text-slate-900 mb-2">
+       80 - 100
+      </div>
+      <div class="text-slate-500 text-sm">
+       Sq. Ft coverage @ 2" depth
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="mt-12 text-center text-slate-400 text-sm no-print">
+    <p>
+     Calculated by RenoCalcHub.com
+    </p>
+   </div>
+  </main>
+ </body>
+</html>

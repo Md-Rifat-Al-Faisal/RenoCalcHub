@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Search Results | RenoCalcHub</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="/favicon.png" rel="icon" type="image/png"/>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <link href="/css/styles.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-slate-50 font-sans text-slate-800 flex flex-col min-h-screen">
+  <nav class="bg-white border-b border-slate-200 shadow-sm">
+   <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+    <a class="flex items-center text-slate-500 hover:text-blue-600 transition-colors" href="index.html">
+     <i class="fa-solid fa-arrow-left mr-2"></i>
+     Back to Home
+    </a>
+    <span class="font-bold text-slate-900">RenoCalcHub Search</span>
+   </div>
+  </nav>
+  <main class="max-w-4xl mx-auto px-4 py-12 flex-grow">
+   <h1 class="text-3xl font-bold text-slate-900 mb-2">Search Results</h1>
+   <p class="text-slate-500 mb-8">
+    Showing results for: <span class="font-bold text-slate-900" id="query-display">"..."</span>
+   </p>
+   <div class="space-y-4" id="results-container"></div>
+   
+   <div class="hidden text-center py-12 bg-white rounded-xl border border-slate-200" id="no-results">
+    <i class="fa-solid fa-magnifying-glass text-4xl text-slate-300 mb-4"></i>
+    <h3 class="text-lg font-bold text-slate-700">No matches found</h3>
+    <p class="text-slate-500 text-sm mt-1">Try checking your spelling or use broader keywords like "floor" or "wall".</p>
+    <a class="inline-block mt-4 text-blue-600 font-bold hover:underline" href="index.html">Return Home</a>
+   </div>
+  </main>
+
+  <script>
+    // 1. Full Database (Updated with NEW Content)
+    const siteData = [
+    // --- TOOLS (27) ---
+    { title: "Paint Calculator", url: "/paint/", type: "Tool", description: "Calculate gallons for walls & ceilings.", tags: "wall, ceiling, trim, primer, interior, paint" },
+    { title: "Drywall Estimator", url: "/drywall/", type: "Tool", description: "Estimate sheets, tape, and mud.", tags: "sheetrock, gypsum, mud, tape, interior" },
+    { title: "Flooring Calculator", url: "/flooring/", type: "Tool", description: "Laminate, vinyl, and hardwood estimator.", tags: "laminate, vinyl, hardwood, plank, interior, floor" },
+    { title: "Tile & Grout", url: "/tile/", type: "Tool", description: "Calculate tiles and mortar bags.", tags: "bathroom, kitchen, mortar, floor, interior, ceramic" },
+    { title: "Wallpaper Calculator", url: "/wallpaper/", type: "Tool", description: "Estimate rolls and paste.", tags: "roll, paste, pattern, decor, interior" },
+    { title: "AC BTU Sizer", url: "/ac/", type: "Tool", description: "Find the right AC size for your room.", tags: "cooling, hvac, air conditioner, room, interior" },
+    { title: "Attic Insulation", url: "/insulation/", type: "Tool", description: "Blown-in vs Rolled insulation calculator.", tags: "fiberglass, cellulose, r-value, energy, interior" },
+    { title: "Roofing Calculator", url: "/roofing/", type: "Tool", description: "Estimate shingles and bundles.", tags: "shingles, pitch, square, exterior, roof" },
+    { title: "Siding Calculator", url: "/siding/", type: "Tool", description: "Vinyl and Cement siding estimator.", tags: "vinyl, cement, clapboard, exterior, side" },
+    { title: "Decking Calculator", url: "/deck/", type: "Tool", description: "Deck boards and fastener calculator.", tags: "wood, composite, screws, board, exterior" },
+    { title: "Fence Calculator", url: "/fence/", type: "Tool", description: "Pickets, rails, and posts.", tags: "picket, privacy, post, concrete, exterior, yard" },
+    { title: "Wall Framing", url: "/framing/", type: "Tool", description: "Studs and plates 16 OC calculator.", tags: "stud, plate, wood, construction, exterior, frame" },
+    { title: "Stair Calculator", url: "/stairs/", type: "Tool", description: "Rise, run, and stringer layout.", tags: "rise, run, stringer, step, exterior, climb" },
+    { title: "Baluster Spacing", url: "/baluster/", type: "Tool", description: "Even spacing for deck railings.", tags: "railing, spindle, gap, code, exterior" },
+    { title: "Concrete Calculator", url: "/concrete/", type: "Tool", description: "Slabs, footings, and 80lb bags.", tags: "slab, footing, bag, cement, landscape, mix" },
+    { title: "Pavers & Patio", url: "/pavers/", type: "Tool", description: "Bricks, sand, and gravel base.", tags: "brick, stone, sand, hardscape, landscape, walk" },
+    { title: "Gravel Driveway", url: "/gravel/", type: "Tool", description: "Tons of stone and truckloads.", tags: "stone, rock, tons, truck, landscape, drive" },
+    { title: "Retaining Wall", url: "/retaining-wall/", type: "Tool", description: "Blocks, caps, and drainage.", tags: "block, cap, drainage, landscape, retention" },
+    { title: "Brick Masonry", url: "/brick/", type: "Tool", description: "Brick wall and mortar calculator.", tags: "wall, mortar, sand, landscape, mason" },
+    { title: "Mulch & Soil", url: "/mulch/", type: "Tool", description: "Bags or yards for gardens.", tags: "garden, bed, dirt, yard, landscape" },
+    { title: "Wainscoting Calculator", url: "/wainscoting/", type: "Tool", description: "Board & Batten layout.", tags: "board and batten, trim, carpentry, wall, interior" },
+    { title: "Rain Gutter Calculator", url: "/gutters/", type: "Tool", description: "Downspouts and hangers.", tags: "drainage, roof, downspout, exterior, water" },
+    { title: "Countertop Cost", url: "/countertop/", type: "Tool", description: "Granite & Quartz estimator.", tags: "kitchen, granite, quartz, square footage, remodel" },
+    { title: "Recessed Lighting", url: "/lighting/", type: "Tool", description: "Grid layout spacing.", tags: "can lights, electrical, ceiling, grid, spacing, led" },
+    { title: "Dumpster Size", url: "/dumpster/", type: "Tool", description: "Waste yardage calculator.", tags: "waste, demolition, trash, cubic yards, renovation" },
+    { title: "Lumber Calculator", url: "/lumber/", type: "Tool", description: "Board Foot calculator.", tags: "woodworking, hardwood, volume, timber, carpentry" },
+    { title: "Grass Seed & Sod", url: "/grass/", type: "Tool", description: "Seed pounds & Sod pallets.", tags: "grass, lawn, yard, landscape" },
+    
+    // --- NEW GUIDES (Interior) ---
+    { title: "Cost to Install 200 Amp Panel", url: "/blog/interior/cost-to-install-a-200-amp-service-panel.html", type: "Guide", description: "2026 Price guide for electrical upgrades.", tags: "electrical, panel, 200 amp, breaker, interior" },
+    { title: "Bathroom Fan CFM Calculator", url: "/blog/interior/bathroom-fan-cfm-calculator.html", type: "Guide", description: "Calculate fan size for bathrooms.", tags: "bathroom, fan, ventilation, cfm, interior" },
+    { title: "Paint for Bathroom Cabinets", url: "/blog/interior/best-paint-for-bathroom-cabinets-2026.html", type: "Guide", description: "Best paints for high humidity.", tags: "paint, bathroom, cabinet, interior" },
+    { title: "Remove Popcorn Ceilings", url: "/blog/interior/how-to-remove-popcorn-ceilings-safely.html", type: "Guide", description: "Safety guide for asbestos & scraping.", tags: "popcorn, ceiling, drywall, interior" },
+    { title: "Peel and Stick Tile Guide", url: "/blog/interior/peel-and-stick-tile-does-it-last.html", type: "Guide", description: "Durability review of vinyl tiles.", tags: "tile, vinyl, floor, interior" },
+
+    // --- NEW GUIDES (Exterior) ---
+    { title: "Vinyl Siding Cost Calculator", url: "/blog/exterior/vinyl-siding-cost-calculator-2026.html", type: "Guide", description: "Price per square & J-channel costs.", tags: "siding, vinyl, cost, exterior" },
+    { title: "Window Header Framing", url: "/blog/exterior/how-to-frame-a-window-header.html", type: "Guide", description: "Load bearing header span tables.", tags: "framing, header, window, exterior" },
+    { title: "Cost to Build 12x12 Deck", url: "/blog/exterior/cost-to-build-a-12x12-deck.html", type: "Guide", description: "Material breakdown for standard decks.", tags: "deck, cost, lumber, exterior" },
+
+    // --- NEW GUIDES (Landscape) ---
+    { title: "Best Concrete Mix for Driveways", url: "/blog/landscape/best-concrete-mix-for-driveways.html", type: "Guide", description: "4000 PSI vs 3000 PSI explained.", tags: "concrete, driveway, mix, landscape" },
+    { title: "French Drain Installation", url: "/blog/landscape/french-drain-installation-guide.html", type: "Guide", description: "Stop yard flooding with proper drainage.", tags: "drainage, pipe, gravel, landscape" },
+
+    // --- ORIGINAL GUIDES ---
+    { title: "Drywall Estimation Guide", url: "/blog/interior/how-to-estimate-drywall.html", type: "Guide", description: "Hanging math: 12ft sheets vs 8ft sheets.", tags: "drywall, sheetrock, hanging, screws, interior" },
+    { title: "Cost to Paint Cabinets", url: "/blog/interior/cost-to-paint-kitchen-cabinet.html", type: "Guide", description: "2025 Kitchen cabinet painting cost breakdown.", tags: "kitchen, paint, cabinet, renovation, interior" },
+    { title: "AC Sizing Guide", url: "/blog/interior/ac-btu-sizing.html", type: "Guide", description: "Why bigger isn't better for AC units.", tags: "hvac, cooling, btu, short cycle, interior" },
+    { title: "Laminate vs Vinyl Plank", url: "/blog/interior/laminate-vs-vinyl-plank.html", type: "Guide", description: "Flooring comparison: Waterproofing & Durability.", tags: "floor, lvp, laminate, vinyl, interior" },
+    { title: "Wallpaper Pattern Math", url: "/blog/interior/wallpaper-pattern-repeat.html", type: "Guide", description: "Calculate waste for drop & straight match.", tags: "wallpaper, pattern, repeat, waste, interior" },
+    { title: "Paint Sheen Guide", url: "/blog/interior/paint-sheen-guide.html", type: "Guide", description: "Flat vs satin vs eggshell explained.", tags: "paint, sheen, finish, interior, walls, trim" },
+    { title: "How to Estimate Paint Guide", url: "/blog/interior/paint-estimation-guide.html", type: "Guide", description: "Calculate gallons, subtract windows, waste factor.", tags: "paint, estimate, gallon, calculator, wall, coverage" },
+    { title: "Blown vs Rolled Insulation", url: "/blog/exterior/blown-vs-rolled-insulation.html", type: "Guide", description: "Cost comparison for attic upgrades.", tags: "insulation, r-value, attic, fiberglass, exterior" },
+    { title: "Stair Stringer Calculator Guide", url: "/blog/exterior/stair-stringer-calculator-guide.html", type: "Guide", description: "How to cut stringers and calculate rise/run.", tags: "stairs, stringer, rise, run, deck, exterior" },
+    { title: "Fence Cost: 1 Acre", url: "/blog/exterior/cost-to-fence-1-acre.html", type: "Guide", description: "Wood vs Chain Link costs for 1 acre.", tags: "fence, acre, perimeter, wood, chain link, exterior" },
+    { title: "Roofing: Bundles Per Square", url: "/blog/exterior/shingles-per-square-calculator.html", type: "Guide", description: "The 3-bundle rule and pitch multipliers.", tags: "roof, shingles, square, bundle, pitch, exterior" },
+    { title: "Deck Joist Spacing", url: "/blog/exterior/deck-joist-spacing-guide.html", type: "Guide", description: "16 inch vs 24 inch OC framing explained.", tags: "deck, joist, spacing, framing, structural, exterior" },
+    { title: "Siding Waste Factor", url: "/blog/exterior/siding-waste-calculator-guide.html", type: "Guide", description: "Vinyl vs Hardie waste math & Dye Lot dangers.", tags: "siding, vinyl, hardie, waste, exterior, dye lot" },
+    { title: "Baluster Spacing Code", url: "/blog/exterior/baluster-spacing-code-guide.html", type: "Guide", description: "The 4-inch rule & stair triangle exception.", tags: "baluster, spacing, railing, code, deck, safety" },
+    { title: "Shed Framing Guide", url: "/blog/exterior/shed-framing-guide.html", type: "Guide", description: "Stud calc, California corners & top plates.", tags: "shed, framing, studs, 16 oc, exterior, wood" },
+    { title: "Paver Sand vs Gravel Base", url: "/blog/landscape/paver-sand-vs-gravel-guide.html", type: "Guide", description: "Layers explained, crusher run vs sand.", tags: "pavers, patio, base, sand, gravel, screed" },
+    { title: "Retaining Wall Guide", url: "/blog/landscape/retaining-wall-calculator-guide.html", type: "Guide", description: "Blocks, caps, drainage gravel & embedment math.", tags: "retaining wall, blocks, hardscape, landscape, drainage" },
+    { title: "Sod Pallet Calculator", url: "/blog/landscape/sod-pallet-calculator-guide.html", type: "Guide", description: "1/4 acre math, pallet coverage, prep guide.", tags: "sod, grass, landscape, pallet, acre, yard" },
+    { title: "Mulch Calculator Guide", url: "/blog/landscape/mulch-calculator-guide.html", type: "Guide", description: "Bulk vs bags, 3-inch depth rule & artillery fungus.", tags: "mulch, garden, landscape, soil, bags, bulk" },
+    { title: "Concrete Bag Calculator", url: "/blog/landscape/concrete-bag-calculator-guide.html", type: "Guide", description: "80lb vs 60lb bags, yield math & mixing tips.", tags: "concrete, slab, patio, cement, bags, 80lb, landscape" },
+    { title: "Gravel Driveway Cost", url: "/blog/landscape/gravel-driveway-cost-guide.html", type: "Guide", description: "#3 vs #57 stone, fabric, and drainage tips.", tags: "gravel, driveway, cost, landscape, stone, geotextile" },
+    { title: "Brick Mortar Ratio", url: "/blog/landscape/brick-mortar-ratio-guide.html", type: "Guide", description: "1:4 mix recipe, plasticizer tips, Type N vs S.", tags: "mortar, brick, cement, mixing, masonry" }
+    ];
+    
+    // 2. Configure Fuse
+    const fuse = new Fuse(siteData, {
+        keys: ['title', 'tags', 'description'],
+        includeScore: true,
+        threshold: 0.5,
+        distance: 200,
+        ignoreLocation: true
+    });
+
+    // 3. Execute Search
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('q') || "";
+    document.getElementById('query-display').innerText = '"' + query + '"';
+    
+    if(query.length > 1) {
+        const results = fuse.search(query);
+        const container = document.getElementById('results-container');
+        
+        if(results.length > 0) {
+            results.forEach(result => {
+                const item = result.item;
+                const icon = item.type === 'Tool' ? 'fa-calculator' : 'fa-book-open';
+                const bg = item.type === 'Tool' ? 'bg-blue-100 text-blue-600' : 'bg-orange-100 text-orange-600';
+
+                const div = document.createElement('a');
+                div.href = item.url;
+                div.className = "block bg-white p-6 rounded-xl border border-slate-200 hover:border-blue-500 hover:shadow-md transition group";
+                div.innerHTML = `
+                    <div class="flex items-start">
+                        <div class="h-12 w-12 ${bg} rounded-lg flex items-center justify-center mr-4 flex-shrink-0 group-hover:scale-110 transition">
+                            <i class="fa-solid ${icon} text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition">${item.title}</h3>
+                            <p class="text-slate-500 mt-1">${item.description}</p>
+                            <span class="inline-block mt-3 text-xs font-bold uppercase tracking-wide text-slate-400 bg-slate-100 px-2 py-1 rounded">${item.type}</span>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+        } else {
+            document.getElementById('no-results').classList.remove('hidden');
+        }
+    } else {
+        document.getElementById('no-results').classList.remove('hidden');
+    }
+  </script>
+
+  <div id="search-index-static" class="hidden">
+    <ul>
+      <li><a href="/siding/">Siding Calculator</a></li>
+      <li><a href="/paint/">Paint Calculator</a></li>
+      <li><a href="/blog/exterior/vinyl-siding-cost-calculator-2026.html">Vinyl Siding Guide</a></li>
+      <li><a href="/blog/interior/cost-to-install-a-200-amp-service-panel.html">200 Amp Panel Cost</a></li>
+      <li><a href="/blog/interior/paint-sheen-guide.html">Paint Sheen Guide</a></li>
+      </ul>
+  </div>
+ </body>
+</html>

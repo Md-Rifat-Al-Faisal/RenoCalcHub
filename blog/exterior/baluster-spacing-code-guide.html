@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Baluster Spacing Code Guide: The 4-Inch Rule Explained | RenoCalcHub
+  </title>
+  <meta content="Jack Miller explains the IRC 4-inch sphere rule for deck railings. Learn how to calculate even baluster spacing and avoid failing inspection on stairs." name="description"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+  <link href="/favicon.png" rel="icon" type="image/png"/>
+  <link href="/css/styles.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-slate-50 font-sans text-slate-800 flex flex-col min-h-screen">
+  <nav class="bg-white border-b border-slate-200 shadow-sm sticky top-0 z-50">
+   <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
+    <a class="flex items-center text-slate-500 hover:text-blue-600 transition-colors font-medium text-sm" href="../index.html">
+     <i class="fa-solid fa-arrow-left mr-2">
+     </i>
+     Back to Blog
+    </a>
+    <a class="font-black text-slate-900 text-xl flex items-center tracking-tight" href="/">
+     <i class="fa-solid fa-calculator text-blue-600 mr-2">
+     </i>
+     RenoCalcHub
+    </a>
+   </div>
+  </nav>
+  <main class="max-w-7xl mx-auto px-4 py-12">
+   <header class="mb-10 text-center max-w-3xl mx-auto">
+    <nav class="flex justify-center items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">
+     <a class="hover:text-blue-600" href="/">
+      Home
+     </a>
+     <span>
+      /
+     </span>
+     <a class="hover:text-blue-600" href="../index.html">
+      Blog
+     </a>
+     <span>
+      /
+     </span>
+     <span class="text-orange-600">
+      Exterior
+     </span>
+    </nav>
+    <h1 class="text-3xl md:text-5xl font-black text-slate-900 mb-6 leading-tight tracking-tight">
+     Baluster Spacing Code:
+     <span class="text-orange-600">
+      The 4-Inch Sphere Rule
+     </span>
+    </h1>
+    <div id="author-block">
+    </div>
+   </header>
+   <figure class="w-full mb-10">
+    <img alt="Deck railing inspection showing baluster spacing check" class="w-full h-auto rounded-3xl shadow-xl border border-slate-200 object-cover" src="https://res.cloudinary.com/renocalchub/image/upload/f_auto,q_auto/v1766398595/deck-railing-safety-check-with-red-sphere-baluster-gap_v7ihjr.jpg"/>
+    <figcaption class="text-center text-xs text-slate-400 mt-4 italic font-medium leading-relaxed max-w-2xl mx-auto">
+     This is the test. If a 4-inch ball fits through your railing, you fail inspection. And worse, you create a safety hazard for small children.
+    </figcaption>
+   </figure>
+   <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+    <div class="lg:col-span-8 xl:col-span-9">
+     <article class="font-sans text-slate-800 leading-relaxed text-base">
+      <section class="max-w-3xl mx-auto">
+       <div class="bg-orange-50/50 border border-orange-100 rounded-3xl p-8 mb-10 shadow-sm relative overflow-hidden">
+        <i class="fa-solid fa-child-reaching absolute -right-4 -top-4 text-7xl text-orange-100 opacity-50 rotate-12">
+        </i>
+        <h3 class="font-black text-orange-900 text-lg mb-4 uppercase tracking-widest flex items-center relative z-10">
+         <i class="fa-solid fa-star mr-2 text-yellow-500">
+         </i>
+         Code Briefing (IRC R312)
+        </h3>
+        <ul class="space-y-3 text-orange-900/80 font-medium relative z-10 text-sm">
+         <li class="flex items-start">
+          <i class="fa-solid fa-circle-check text-orange-500 mt-1 mr-3 text-xs">
+          </i>
+          <strong>
+           The 4-Inch Rule:
+          </strong>
+          The gap between balusters (spindles) must be small enough that a 4-inch sphere cannot pass through.
+         </li>
+         <li class="flex items-start">
+          <i class="fa-solid fa-circle-check text-orange-500 mt-1 mr-3 text-xs">
+          </i>
+          <strong>
+           The Stair Exception:
+          </strong>
+          On the side of stairs, the triangular gap formed by the riser and tread allows for a 6-inch sphere.
+         </li>
+         <li class="flex items-start">
+          <i class="fa-solid fa-circle-check text-orange-500 mt-1 mr-3 text-xs">
+          </i>
+          <strong>
+           The Strength Test:
+          </strong>
+          The railing must withstand 200 lbs of force pushing horizontally against it.
+         </li>
+        </ul>
+       </div>
+       <div class="prose prose-slate max-w-none text-base text-slate-600 leading-relaxed mb-10">
+        <p>
+         You spend $15,000 on materials. You labor for three weekends. You stand back and admire your beautiful mahogany deck. Then the building inspector arrives, pulls a red plastic ball out of his truck, pushes it between your spindles, and says two words:
+         <strong>
+          "Tear it down."
+         </strong>
+        </p>
+        <p class="mt-4">
+         Baluster spacing isn't an aesthetic choice; it is a life-safety issue. The code isn't arbitrary. It is written in response to accidents. Small children can slide their bodies through a 5-inch gap, but their heads (which are larger than their bodies) get stuck. That is a trap.
+        </p>
+        <p class="mt-4">
+         In my line of work, we don't eyeball spacing. We calculate it down to the decimal. Today, I'm going to teach you how to do the math so your railing is safe, symmetrical, and passes inspection on the first try.
+        </p>
+       </div>
+       <h2 class="text-3xl font-black text-slate-900 mb-8 border-b-4 border-orange-600 inline-block">
+        The Railing Kit
+       </h2>
+       <p class="text-slate-600 mb-8 text-base">
+        Spacing balusters evenly requires precision. If you start from one end and just go, you'll end up with a weird 1-inch gap at the far post.
+       </p>
+       <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <li class="flex items-start bg-white border border-slate-200 p-5 rounded-2xl shadow-sm hover:border-orange-300 hover:shadow-md transition-all group">
+         <div class="h-12 w-12 bg-orange-50 rounded-xl flex items-center justify-center mr-4 text-orange-600 flex-shrink-0 group-hover:scale-110 transition">
+          <i class="fa-solid fa-ruler-horizontal">
+          </i>
+         </div>
+         <div>
+          <a class="block font-bold text-slate-900 hover:text-orange-600 transition mb-1 text-sm underline decoration-orange-200 underline-offset-2" data-amz="tape_measure" href="#">
+           Pro Tape Measure
+          </a>
+          <span class="text-xs text-slate-500 font-medium leading-tight">
+           You need a tape that measures in 1/16ths clearly. Precision matters here.
+          </span>
+         </div>
+        </li>
+        <li class="flex items-start bg-white border border-slate-200 p-5 rounded-2xl shadow-sm hover:border-orange-300 hover:shadow-md transition-all group">
+         <div class="h-12 w-12 bg-orange-50 rounded-xl flex items-center justify-center mr-4 text-orange-600 flex-shrink-0 group-hover:scale-110 transition">
+          <i class="fa-solid fa-pencil">
+          </i>
+         </div>
+         <div>
+          <a class="block font-bold text-slate-900 hover:text-orange-600 transition mb-1 text-sm underline decoration-orange-200 underline-offset-2" data-amz="speed_square" href="#">
+           Speed Square
+          </a>
+          <span class="text-xs text-slate-500 font-medium leading-tight">
+           Essential for marking perfectly vertical lines on your rails before attaching the spindles.
+          </span>
+         </div>
+        </li>
+        <li class="flex items-start bg-white border border-slate-200 p-5 rounded-2xl shadow-sm hover:border-orange-300 hover:shadow-md transition-all group">
+         <div class="h-12 w-12 bg-orange-50 rounded-xl flex items-center justify-center mr-4 text-orange-600 flex-shrink-0 group-hover:scale-110 transition">
+          <i class="fa-solid fa-calculator">
+          </i>
+         </div>
+         <div>
+          <a class="block font-bold text-slate-900 hover:text-orange-600 transition mb-1 text-sm" href="../../baluster/">
+           Baluster Calculator
+          </a>
+          <span class="text-xs text-slate-500 font-medium leading-tight">
+           Enter your rail length and baluster width. It tells you exactly how far apart to space them.
+          </span>
+         </div>
+        </li>
+       </ul>
+      </section>
+      <section class="max-w-3xl mx-auto py-10">
+       <h2 class="text-3xl font-black text-slate-900 mb-8 border-b-4 border-orange-600 inline-block">
+        The Two Ways to Measure
+       </h2>
+       <div class="prose prose-slate text-slate-600 text-base leading-relaxed mb-10">
+        <p>
+         There are two languages in carpentry. You need to know which one you are speaking, or your layout will be wrong.
+        </p>
+       </div>
+       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div class="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm hover:border-blue-300 transition group">
+         <h4 class="font-bold text-slate-900 text-lg mb-2">
+          1. The "Clear Gap" Method
+         </h4>
+         <p class="text-sm text-slate-600 mb-4 leading-relaxed">
+          This measures the empty air between two spindles.
+         </p>
+         <div class="bg-blue-50 p-3 rounded-lg text-blue-900 text-xs font-bold border border-blue-100">
+          Code Rule: MUST be less than 4 inches.
+         </div>
+         <p class="text-xs text-slate-500 mt-3 italic">
+          *This is what the inspector checks.*
+         </p>
+        </div>
+        <div class="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm hover:border-orange-300 transition group">
+         <h4 class="font-bold text-slate-900 text-lg mb-2">
+          2. The "On-Center" Method
+         </h4>
+         <p class="text-sm text-slate-600 mb-4 leading-relaxed">
+          This measures from the center of one spindle to the center of the next.
+         </p>
+         <div class="bg-orange-50 p-3 rounded-lg text-orange-900 text-xs font-bold border border-orange-100">
+          Layout Rule: Use this for marking tape.
+         </div>
+         <p class="text-xs text-slate-500 mt-3 italic">
+          *This is what YOU use to build.*
+         </p>
+        </div>
+       </div>
+       <h2 class="text-3xl font-black text-slate-900 mb-8 border-b-4 border-orange-600 inline-block">
+        How to Calculate Even Spacing
+       </h2>
+       <p class="text-slate-600 mb-8 text-base">
+        Do not just space them 4 inches apart and leave a random gap at the end. That looks amateur. Here is how to make them perfectly symmetrical.
+       </p>
+       <div class="space-y-6 mb-12">
+        <div class="flex gap-4">
+         <div class="flex-shrink-0 w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center font-black">
+          1
+         </div>
+         <div>
+          <h5 class="font-bold text-slate-900 text-lg">
+           Measure Total Length
+          </h5>
+          <p class="text-sm text-slate-600">
+           Measure the daylight opening between your two posts (e.g., 70 inches).
+          </p>
+         </div>
+        </div>
+        <div class="flex gap-4">
+         <div class="flex-shrink-0 w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center font-black">
+          2
+         </div>
+         <div>
+          <h5 class="font-bold text-slate-900 text-lg">
+           Add One Baluster Width
+          </h5>
+          <p class="text-sm text-slate-600">
+           Take your baluster width (usually 1.5") and add it to the maximum allowable gap (4"). Total unit = 5.5".
+          </p>
+         </div>
+        </div>
+        <div class="flex gap-4">
+         <div class="flex-shrink-0 w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center font-black">
+          3
+         </div>
+         <div>
+          <h5 class="font-bold text-slate-900 text-lg">
+           Divide &amp; Round Up
+          </h5>
+          <p class="text-sm text-slate-600">
+           Divide Length (70) by Unit (5.5) = 12.72.
+           <br/>
+           <strong>
+            Round UP
+           </strong>
+           to the next whole number: 13 spaces.
+          </p>
+         </div>
+        </div>
+        <div class="flex gap-4">
+         <div class="flex-shrink-0 w-10 h-10 rounded-full bg-orange-600 text-white flex items-center justify-center font-black">
+          4
+         </div>
+         <div>
+          <h5 class="font-bold text-slate-900 text-lg">
+           Find Exact Spacing
+          </h5>
+          <p class="text-sm text-slate-600">
+           Take Length (70) ÷ Spaces (13) =
+           <strong>
+            5.38 inches On-Center.
+           </strong>
+           <br/>
+           Subtract the baluster width (1.5") to check gap: 5.38 - 1.5 =
+           <strong>
+            3.88 inches gap.
+           </strong>
+          </p>
+          <div class="mt-2 inline-block bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">
+           PASS: 3.88" is less than 4". Perfect.
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="mb-12">
+        <figure>
+         <img alt="Technical illustration comparing on-center spacing to clear gap spacing" class="w-full h-auto rounded-3xl border border-slate-200 shadow-md" src="https://res.cloudinary.com/renocalchub/image/upload/f_auto,q_auto/baluster-spacing-code-diagram-4-inch-clear-gap-5-5-inch-on-center_zzxg3i.jpg"/>
+         <figcaption class="text-center text-xs text-slate-400 mt-2 italic">
+          We calculate using centers, but inspect using gaps.
+         </figcaption>
+        </figure>
+       </div>
+       <div class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-[2.5rem] p-10 text-center text-white mb-20 shadow-2xl relative overflow-hidden group">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/wood-pattern.png')] opacity-10">
+        </div>
+        <h3 class="text-3xl font-black mb-4 relative z-10 tracking-tight">
+         Don't Do Manual Math
+        </h3>
+        <p class="text-slate-300 mb-8 max-w-xl mx-auto relative z-10 text-base leading-relaxed">
+         That division is annoying. Our tool does the math instantly and tells you exactly where to mark your tape measure.
+        </p>
+        <a class="inline-flex items-center bg-orange-600 text-white font-black py-4 px-10 rounded-full hover:bg-orange-700 transition-all shadow-xl hover:-translate-y-1 relative z-10 uppercase tracking-widest text-xs" href="../../baluster/">
+         <i class="fa-solid fa-calculator mr-3">
+         </i>
+         Calculate Spacing Now
+        </a>
+       </div>
+      </section>
+      <section class="max-w-3xl mx-auto py-10">
+       <h2 class="text-3xl font-black text-slate-900 mb-8 border-b-4 border-orange-600 inline-block">
+        The Stair Exception (4 ⅜" &amp; 6")
+       </h2>
+       <p class="text-slate-600 mb-8 text-base">
+        Stairs are geometrically awkward. Because of this, the International Residential Code (IRC) gives you two "bonus" measurements that apply
+        <strong>
+         only
+        </strong>
+        to stairs.
+       </p>
+       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div class="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm relative overflow-hidden group">
+         <div class="absolute -right-6 -top-6 bg-slate-100 rounded-full w-24 h-24 flex items-center justify-center group-hover:bg-blue-100 transition">
+          <i class="fa-solid fa-ruler-vertical text-3xl text-slate-400 group-hover:text-blue-500 transition">
+          </i>
+         </div>
+         <h4 class="font-bold text-slate-900 text-lg mb-2 relative z-10">
+          The Main Gap
+         </h4>
+         <div class="text-3xl font-black text-blue-600 mb-2 relative z-10">
+          4 ⅜"
+         </div>
+         <p class="text-sm text-slate-600 relative z-10">
+          On flat decks, the limit is 4 inches. On stairs, the code allows a sphere up to
+          <strong>
+           4 ⅜ inches
+          </strong>
+          to pass through.
+         </p>
+         <p class="text-xs text-slate-400 mt-2 italic relative z-10">
+          Jack's Advice: Stick to 4" anyway. Why risk it?
+         </p>
+        </div>
+        <div class="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm relative overflow-hidden group">
+         <div class="absolute -right-6 -top-6 bg-slate-100 rounded-full w-24 h-24 flex items-center justify-center group-hover:bg-orange-100 transition">
+          <i class="fa-solid fa-play text-3xl text-slate-400 group-hover:text-orange-500 transition rotate-90">
+          </i>
+         </div>
+         <h4 class="font-bold text-slate-900 text-lg mb-2 relative z-10">
+          The "Triangle"
+         </h4>
+         <div class="text-3xl font-black text-orange-600 mb-2 relative z-10">
+          6"
+         </div>
+         <p class="text-sm text-slate-600 relative z-10">
+          The triangular gap formed by the stair tread, the riser, and the bottom rail. This can pass a
+          <strong>
+           6-inch sphere
+          </strong>
+          .
+         </p>
+        </div>
+       </div>
+       <div class="mb-12">
+        <figure>
+         <img alt="Code diagram illustrating the 6-inch sphere rule for stair triangles" class="w-full h-auto rounded-3xl border border-slate-200 shadow-md" src="https://res.cloudinary.com/renocalchub/image/upload/f_auto,q_auto/stair-railing-code-sphere-rules-4-3-8-inch-gap-6-inch-triangle-exception_nokkzl.png"/>
+         <figcaption class="text-center text-xs text-slate-400 mt-2 italic">
+          The "Triangle Zone" is the only place on a deck where a 6-inch gap is legal.
+         </figcaption>
+        </figure>
+       </div>
+       <h2 class="text-3xl font-black text-slate-900 mb-8 border-b-4 border-orange-600 inline-block">
+        The Pro Installation Trick
+       </h2>
+       <div class="flex flex-col md:flex-row gap-8 mb-12 items-center">
+        <div class="md:w-1/2">
+         <p class="text-slate-600 mb-4 leading-relaxed">
+          Trying to install balusters on stairs one by one is a nightmare. Gravity fights you, and it's hard to keep them plumb (vertical).
+         </p>
+         <div class="bg-slate-900 text-white p-6 rounded-xl shadow-lg">
+          <h5 class="font-bold text-orange-400 mb-2">
+           <i class="fa-solid fa-hammer mr-2">
+           </i>
+           Build It On The Ground
+          </h5>
+          <p class="text-sm text-slate-300 leading-relaxed">
+           1. Cut your top and bottom rails to the correct angle.
+           <br/>
+           2. Lay them on a flat surface (garage floor).
+           <br/>
+           3. Mark your spacing on both rails simultaneously.
+           <br/>
+           4. Screw the balusters in while flat.
+           <br/>
+           5. Lift the entire "panel" into place and attach it to the posts.
+          </p>
+         </div>
+        </div>
+        <div class="md:w-1/2">
+         <figure>
+          <img alt="Pre-assembling stair railing on the ground" class="w-full h-auto rounded-3xl border border-slate-200 shadow-md" src="https://res.cloudinary.com/renocalchub/image/upload/f_auto,q_auto/pre-assembling-wood-deck-railing-carpentry-workshop-technique_djrw84.png"/>
+          <figcaption class="text-center text-xs text-slate-400 mt-2 italic">
+           Don't fight gravity. Assemble the "ladder" flat, then lift it into place.
+          </figcaption>
+         </figure>
+        </div>
+       </div>
+       <h2 class="text-3xl font-black text-slate-900 mb-8 border-b-4 border-orange-600 inline-block">
+        Why Your Math Might Fail
+       </h2>
+       <p class="text-slate-600 mb-8 text-base">
+        Remember high school geometry? On stairs, the
+        <strong>
+         rail length
+        </strong>
+        (diagonal) is longer than the
+        <strong>
+         horizontal run
+        </strong>
+        .
+       </p>
+       <div class="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r-xl mb-8">
+        <p class="text-orange-900 text-sm font-medium leading-relaxed">
+         <strong>
+          The Warning:
+         </strong>
+         If you calculate your spacing based on the
+         <em>
+          horizontal
+         </em>
+         distance, your gaps will be too wide when measured on the
+         <em>
+          diagonal
+         </em>
+         rail. Always measure the actual length of the rail itself to do your division.
+        </p>
+       </div>
+      </section>
+      <section class="max-w-3xl mx-auto py-10">
+       <h2 class="text-3xl font-black text-slate-900 mb-10 border-b-4 border-orange-600 inline-block">
+        Baluster FAQ: The Safety Checks
+       </h2>
+       <div class="space-y-4 mb-20 text-sm">
+        <details class="group bg-white border border-slate-200 rounded-2xl p-6 cursor-pointer shadow-sm hover:border-orange-300 transition-all duration-300">
+         <summary class="font-black text-lg text-slate-900 flex justify-between items-center list-none">
+          Can I use horizontal cable railings?
+          <span class="group-open:rotate-180 transition-transform duration-500 bg-slate-50 h-8 w-8 rounded-full flex items-center justify-center border border-slate-100">
+           <i class="fa-solid fa-chevron-down text-slate-400 text-xs">
+           </i>
+          </span>
+         </summary>
+         <div class="text-slate-600 mt-6 pl-4 border-l-4 border-orange-600 leading-relaxed">
+          <strong>
+           Proceed with caution.
+          </strong>
+          While the national code (IRC) technically allows them, many local inspectors hate them because of the "Ladder Effect." Horizontal cables make it easy for toddlers to climb the railing. Always check your
+          <em>
+           local
+          </em>
+          municipality amendments before buying expensive cable hardware.
+         </div>
+        </details>
+        <details class="group bg-white border border-slate-200 rounded-2xl p-6 cursor-pointer shadow-sm hover:border-orange-300 transition-all duration-300">
+         <summary class="font-black text-lg text-slate-900 flex justify-between items-center list-none">
+          Does "Pressure Treated" wood shrink?
+          <span class="group-open:rotate-180 transition-transform duration-500 bg-slate-50 h-8 w-8 rounded-full flex items-center justify-center border border-slate-100">
+           <i class="fa-solid fa-chevron-down text-slate-400 text-xs">
+           </i>
+          </span>
+         </summary>
+         <div class="text-slate-600 mt-6 pl-4 border-l-4 border-orange-600 leading-relaxed">
+          <strong>
+           Yes, massively.
+          </strong>
+          A wet PT board can shrink by 1/8" to 1/4" in width as it dries. If you space your balusters at exactly 4.0 inches, in two months that gap might be 4.25 inches—and you technically fail code.
+          <br/>
+          <strong>
+           Jack's Rule:
+          </strong>
+          Aim for a **3.5-inch gap**. It leaves room for error and shrinkage.
+         </div>
+        </details>
+        <details class="group bg-white border border-slate-200 rounded-2xl p-6 cursor-pointer shadow-sm hover:border-orange-300 transition-all duration-300">
+         <summary class="font-black text-lg text-slate-900 flex justify-between items-center list-none">
+          Do I need balusters on a low deck?
+          <span class="group-open:rotate-180 transition-transform duration-500 bg-slate-50 h-8 w-8 rounded-full flex items-center justify-center border border-slate-100">
+           <i class="fa-solid fa-chevron-down text-slate-400 text-xs">
+           </i>
+          </span>
+         </summary>
+         <div class="text-slate-600 mt-6 pl-4 border-l-4 border-orange-600 leading-relaxed">
+          If the deck floor is less than **30 inches** above the ground, code generally does not require a railing at all. However, if you
+          <em>
+           choose
+          </em>
+          to install one, it must meet all the spacing rules. You can't build a "half-safe" railing.
+         </div>
+        </details>
+       </div>
+       <div class="border-t-2 border-slate-100 pt-16 mt-16 text-center">
+        <h3 class="text-3xl font-black text-slate-900 mb-6 tracking-tight">
+         The Verdict
+        </h3>
+        <p class="mb-10 text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
+         The 4-inch rule is not a suggestion; it is the line between a safe deck and a lawsuit. Do the math, space them evenly, and aim for 3.5 inches to be safe. When the inspector pulls out that red ball, you want to be smiling, not sweating.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+         <a class="inline-flex items-center justify-center px-10 py-5 text-xs font-black text-white transition-all duration-300 bg-orange-600 rounded-full hover:bg-orange-700 hover:shadow-2xl shadow-orange-200 hover:-translate-y-1 uppercase tracking-widest" href="../../baluster/">
+          Calculate Spacing
+          <i class="fa-solid fa-arrow-up ml-3">
+          </i>
+         </a>
+         <a class="inline-flex items-center justify-center px-10 py-5 text-xs font-black text-slate-900 transition-all duration-300 bg-white border border-slate-200 rounded-full hover:bg-slate-50 hover:shadow-lg uppercase tracking-widest" href="/">
+          See All Tools
+         </a>
+        </div>
+       </div>
+      </section>
+     </article>
+    </div>
+    <aside class="lg:col-span-4 xl:col-span-3 mt-12 lg:mt-0">
+     <div id="related-sidebar">
+     </div>
+    </aside>
+   </div>
+  </main>
+  <div id="footer-placeholder">
+  </div>
+  <script src="/load-components.js">
+  </script>
+  <script src="/authors.js">
+  </script>
+  <script src="/articles.js">
+  </script>
+  <script src="/affiliates.js">
+  </script>
+  <script>
+   renderAuthor('miller', 'Jan 28, 2026', 'author-block');
+  </script>
+  <script defer="defer" src="/load-related.js">
+  </script>
+  <script src="/calculators.js">
+  </script>
+ </body>
+</html>

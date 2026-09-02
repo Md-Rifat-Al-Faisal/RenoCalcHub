@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Siding Waste Factor Calculator: Vinyl vs. Hardie | RenoCalcHub
+  </title>
+  <meta content="Jack Miller explains how to calculate siding waste for gables vs. rectangles. Learn why 'Dye Lots' matter and why subtracting windows is a mistake." name="description"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+  <link href="/favicon.png" rel="icon" type="image/png"/>
+  <link href="/css/styles.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-slate-50 font-sans text-slate-800 flex flex-col min-h-screen">
+  <nav class="bg-white border-b border-slate-200 shadow-sm sticky top-0 z-50">
+   <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
+    <a class="flex items-center text-slate-500 hover:text-blue-600 transition-colors font-medium text-sm" href="../index.html">
+     <i class="fa-solid fa-arrow-left mr-2">
+     </i>
+     Back to Blog
+    </a>
+    <a class="font-black text-slate-900 text-xl flex items-center tracking-tight" href="/">
+     <i class="fa-solid fa-calculator text-blue-600 mr-2">
+     </i>
+     RenoCalcHub
+    </a>
+   </div>
+  </nav>
+  <main class="max-w-7xl mx-auto px-4 py-12">
+   <header class="mb-10 text-center max-w-3xl mx-auto">
+    <nav class="flex justify-center items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">
+     <a class="hover:text-blue-600" href="/">
+      Home
+     </a>
+     <span>
+      /
+     </span>
+     <a class="hover:text-blue-600" href="../index.html">
+      Blog
+     </a>
+     <span>
+      /
+     </span>
+     <span class="text-orange-600">
+      Exterior
+     </span>
+    </nav>
+    <h1 class="text-3xl md:text-5xl font-black text-slate-900 mb-6 leading-tight tracking-tight">
+     Siding Waste Factor:
+     <span class="text-orange-600">
+      The "Dye Lot" Danger
+     </span>
+    </h1>
+    <div id="author-block">
+    </div>
+   </header>
+   <figure class="w-full mb-10">
+    <img alt="Contractor cutting vinyl siding with a guillotine cutter on a workbench" class="w-full h-auto rounded-3xl shadow-xl border border-slate-200 object-cover" src="https://res.cloudinary.com/renocalchub/image/upload/f_auto,q_auto/contractor-cutting-grey-vinyl-siding-with-guillotine-shear-on-jobsite_zu6ojd.jpg"/>
+    <figcaption class="text-center text-xs text-slate-400 mt-4 italic font-medium leading-relaxed max-w-2xl mx-auto">
+     Running short by one box isn't just an annoyance—it's a disaster. If the new box comes from a different manufacturing batch ("dye lot"), the colors won't match.
+    </figcaption>
+   </figure>
+   <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+    <div class="lg:col-span-8 xl:col-span-9">
+     <article class="font-sans text-slate-800 leading-relaxed text-base">
+      <section class="max-w-3xl mx-auto">
+       <div class="bg-orange-50/50 border border-orange-100 rounded-3xl p-8 mb-10 shadow-sm relative overflow-hidden">
+        <i class="fa-solid fa-scissors absolute -right-4 -top-4 text-7xl text-orange-100 opacity-50 rotate-12">
+        </i>
+        <h3 class="font-black text-orange-900 text-lg mb-4 uppercase tracking-widest flex items-center relative z-10">
+         <i class="fa-solid fa-star mr-2 text-yellow-500">
+         </i>
+         Field Notes
+        </h3>
+        <ul class="space-y-3 text-orange-900/80 font-medium relative z-10 text-sm">
+         <li class="flex items-start">
+          <i class="fa-solid fa-circle-check text-orange-500 mt-1 mr-3 text-xs">
+          </i>
+          <strong>
+           Rectangles vs. Triangles:
+          </strong>
+          A simple box house needs 10% waste. A house with gables (triangles) needs 15-20% because of the angled cuts.
+         </li>
+         <li class="flex items-start">
+          <i class="fa-solid fa-circle-check text-orange-500 mt-1 mr-3 text-xs">
+          </i>
+          <strong>
+           The "Net" Trap:
+          </strong>
+          Do not subtract the square footage of small windows. Use that "extra" siding as your buffer.
+         </li>
+         <li class="flex items-start">
+          <i class="fa-solid fa-circle-check text-orange-500 mt-1 mr-3 text-xs">
+          </i>
+          <strong>
+           Hardie vs. Vinyl:
+          </strong>
+          Vinyl is sold in "Squares" (100 sq ft). Fiber cement is sold by the piece. The math is different for each.
+         </li>
+        </ul>
+       </div>
+       <div class="prose prose-slate max-w-none text-base text-slate-600 leading-relaxed mb-10">
+        <p>
+         Here is a scenario I see too often: A homeowner measures their walls, calculates exactly 2,000 square feet, and buys 20 squares of siding.
+        </p>
+        <p class="mt-4">
+         They get to the last wall—the one facing the street, naturally—and realize they are three pieces short. They run to the store, buy one more box, install it, and realize...
+         <strong>
+          it's a slightly different shade of tan.
+         </strong>
+        </p>
+        <p class="mt-4">
+         Siding is produced in batches. Just like yarn or wallpaper, these batches have "Dye Lots." If you run short and have to buy from a new batch, your house will look two-toned forever.
+        </p>
+        <p class="mt-4">
+         Calculating waste isn't about guessing; it's about geometry. You can't use a 6-inch cutoff piece on a 12-foot wall. Today, we're going to calculate your material list so you have exactly enough left over to fix a grill melt in 5 years, but not enough to fill a landfill.
+        </p>
+       </div>
+       <h2 class="text-3xl font-black text-slate-900 mb-8 border-b-4 border-orange-600 inline-block">
+        The Siding Kit
+       </h2>
+       <p class="text-slate-600 mb-8 text-base">
+        You can cut siding with a circular saw (backwards blade), but it's messy and dangerous. Here is what the pros use.
+       </p>
+       <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <li class="flex items-start bg-white border border-slate-200 p-5 rounded-2xl shadow-sm hover:border-orange-300 hover:shadow-md transition-all group">
+         <div class="h-12 w-12 bg-orange-50 rounded-xl flex items-center justify-center mr-4 text-orange-600 flex-shrink-0 group-hover:scale-110 transition">
+          <i class="fa-solid fa-ruler-combined">
+          </i>
+         </div>
+         <div>
+          <a class="block font-bold text-slate-900 hover:text-orange-600 transition mb-1 text-sm underline decoration-orange-200 underline-offset-2" data-amz="tape_measure_100" href="#">
+           100' Tape Measure
+          </a>
+          <span class="text-xs text-slate-500 font-medium leading-tight">
+           Your 25-foot tape is useless on a 40-foot wall. Get a reel tape to measure the full length accurately.
+          </span>
+         </div>
+        </li>
+        <li class="flex items-start bg-white border border-slate-200 p-5 rounded-2xl shadow-sm hover:border-orange-300 hover:shadow-md transition-all group">
+         <div class="h-12 w-12 bg-orange-50 rounded-xl flex items-center justify-center mr-4 text-orange-600 flex-shrink-0 group-hover:scale-110 transition">
+          <i class="fa-solid fa-gavel">
+          </i>
+         </div>
+         <div>
+          <a class="block font-bold text-slate-900 hover:text-orange-600 transition mb-1 text-sm underline decoration-orange-200 underline-offset-2" data-amz="siding_cutter" href="#">
+           Guillotine Cutter
+          </a>
+          <span class="text-xs text-slate-500 font-medium leading-tight">
+           Cuts vinyl and cement board without dust or noise. Essential for clean edges.
+          </span>
+         </div>
+        </li>
+        <li class="flex items-start bg-white border border-slate-200 p-5 rounded-2xl shadow-sm hover:border-orange-300 hover:shadow-md transition-all group">
+         <div class="h-12 w-12 bg-orange-50 rounded-xl flex items-center justify-center mr-4 text-orange-600 flex-shrink-0 group-hover:scale-110 transition">
+          <i class="fa-solid fa-calculator">
+          </i>
+         </div>
+         <div>
+          <a class="block font-bold text-slate-900 hover:text-orange-600 transition mb-1 text-sm" href="../../siding/">
+           Siding Calculator
+          </a>
+          <span class="text-xs text-slate-500 font-medium leading-tight">
+           Enter wall dimensions and select your waste factor (10%, 15%, 20%).
+          </span>
+         </div>
+        </li>
+       </ul>
+      </section>
+      <section class="max-w-3xl mx-auto py-10">
+       <h2 class="text-3xl font-black text-slate-900 mb-8 border-b-4 border-orange-600 inline-block">
+        Rule #1: The "Lazy" Math Wins
+       </h2>
+       <div class="prose prose-slate text-slate-600 text-base leading-relaxed mb-10">
+        <p>
+         When a homeowner measures a wall, they usually do this:
+         <br/>
+         <em>
+          (Total Wall Area) - (Window 1) - (Window 2) - (Door) = Net Area.
+         </em>
+        </p>
+        <p class="mt-4">
+         <strong>
+          Stop doing that.
+         </strong>
+        </p>
+        <p class="mt-4">
+         That math assumes you can use every single scrap you cut out of a window opening. You can't. If you cut a 3-foot section out for a window, you are left with two short pieces. Unless you want your house to look like a patchwork quilt of tiny seams, those short pieces are trash.
+        </p>
+       </div>
+       <div class="bg-white border-l-8 border-orange-500 p-8 rounded-r-3xl shadow-sm mb-12">
+        <div class="flex flex-col md:flex-row gap-8 items-center">
+         <div class="md:w-1/2">
+          <h4 class="font-black text-slate-900 text-xl mb-4">
+           The "Pass-Through" Rule
+          </h4>
+          <ul class="space-y-3 text-sm text-slate-600">
+           <li class="flex items-start">
+            <i class="fa-solid fa-xmark text-red-500 mt-1 mr-2">
+            </i>
+            <span>
+             <strong>
+              Standard Windows (under 15 sq ft):
+             </strong>
+             IGNORE them. Measure right over them as if they are solid wall. This builds in your automatic buffer.
+            </span>
+           </li>
+           <li class="flex items-start">
+            <i class="fa-solid fa-check text-green-600 mt-1 mr-2">
+            </i>
+            <span>
+             <strong>
+              Large Openings (Garage/Patio Doors):
+             </strong>
+             SUBTRACT these. They are big enough to matter.
+            </span>
+           </li>
+          </ul>
+         </div>
+         <div class="md:w-1/2">
+          <figure>
+           <img alt="Architectural elevation drawing showing gross area vs net area" class="w-full h-auto rounded-2xl shadow-md border border-slate-200" src="https://res.cloudinary.com/renocalchub/image/upload/f_auto,q_auto/siding-calculation-diagram-gross-area-include-window-subtract-door_iaadfp.jpg"/>
+           <figcaption class="text-center text-xs text-slate-400 mt-2 italic">
+            The Pro Method: Measure the full rectangle. Only subtract the garage door. Use the window area as your waste buffer.
+           </figcaption>
+          </figure>
+         </div>
+        </div>
+       </div>
+       <h2 class="text-3xl font-black text-slate-900 mb-8 border-b-4 border-orange-600 inline-block">
+        Rule #2: Triangles Eat Material
+       </h2>
+       <p class="text-slate-600 mb-8 text-base">
+        The shape of your house determines your waste percentage. A square box is efficient. A Victorian with gables and dormers is a material hog.
+       </p>
+       <div class="overflow-hidden mb-16 rounded-3xl border border-slate-200 shadow-xl text-sm">
+        <div class="overflow-x-auto">
+         <table class="w-full border-collapse min-w-[500px]">
+          <thead>
+           <tr class="bg-slate-900 text-white text-left">
+            <th class="p-5 font-bold uppercase tracking-widest text-xs">
+             Wall Shape
+            </th>
+            <th class="p-5 font-bold uppercase tracking-widest text-xs">
+             Waste Factor
+            </th>
+            <th class="p-5 font-bold uppercase tracking-widest text-xs text-orange-300">
+             Why?
+            </th>
+           </tr>
+          </thead>
+          <tbody class="text-slate-600 bg-white divide-y divide-slate-100">
+           <tr class="hover:bg-orange-50/50 transition">
+            <td class="p-5 font-black text-slate-900">
+             Simple Rectangle (Ranch)
+            </td>
+            <td class="p-5 font-bold text-green-600 text-lg">
+             10%
+            </td>
+            <td class="p-5">
+             Straight cuts. You can use the cut-off from one end to start the next row.
+            </td>
+           </tr>
+           <tr class="hover:bg-orange-50/50 transition">
+            <td class="p-5 font-black text-slate-900">
+             Gables (Triangles)
+            </td>
+            <td class="p-5 font-bold text-orange-600 text-lg">
+             15% - 20%
+            </td>
+            <td class="p-5">
+             Angled cuts. The off-cut is a triangle that usually can't be reused.
+            </td>
+           </tr>
+           <tr class="hover:bg-orange-50/50 transition">
+            <td class="p-5 font-black text-slate-900">
+             Complex (Dormers/Turrets)
+            </td>
+            <td class="p-5 font-bold text-red-600 text-lg">
+             20%+
+            </td>
+            <td class="p-5">
+             Short pieces, many corners. Huge amount of scrap.
+            </td>
+           </tr>
+          </tbody>
+         </table>
+        </div>
+       </div>
+       <div class="mb-12">
+        <h4 class="font-bold text-slate-900 text-lg mb-4">
+         Why Gables Waste 20%
+        </h4>
+        <figure>
+         <img alt="Diagram showing siding waste when cutting gables" class="w-full h-auto rounded-3xl border border-slate-200 shadow-md" src="https://res.cloudinary.com/renocalchub/image/upload/f_auto,q_auto/siding-gable-cut-waste-demonstration-45-degree-angle-diagram_hs64zo.jpg"/>
+         <figcaption class="text-center text-xs text-slate-400 mt-2 italic">
+          Look at the diagram. When you cut a 45-degree angle for the left side of the roof, the "scrap" piece has an angle facing the
+          <em>
+           wrong way
+          </em>
+          for the right side (unless you flip it, but siding has a top and bottom lip, so you can't flip it). That triangle goes in the trash.
+         </figcaption>
+        </figure>
+       </div>
+       <div class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-[2.5rem] p-10 text-center text-white mb-20 shadow-2xl relative overflow-hidden group">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')] opacity-10">
+        </div>
+        <h3 class="text-3xl font-black mb-4 relative z-10 tracking-tight">
+         Run Your Numbers
+        </h3>
+        <p class="text-slate-300 mb-8 max-w-xl mx-auto relative z-10 text-base leading-relaxed">
+         Stop guessing with "gross area." Enter your wall dimensions and let us apply the correct waste percentages for gables and windows automatically.
+        </p>
+        <a class="inline-flex items-center bg-orange-600 text-white font-black py-4 px-10 rounded-full hover:bg-orange-700 transition-all shadow-xl hover:-translate-y-1 relative z-10 uppercase tracking-widest text-xs" href="../../siding/">
+         <i class="fa-solid fa-calculator mr-3">
+         </i>
+         Open Siding Calculator
+        </a>
+       </div>
+      </section>
+      <section class="max-w-3xl mx-auto py-10">
+       <h2 class="text-3xl font-black text-slate-900 mb-8 border-b-4 border-orange-600 inline-block">
+        Ordering: "Square" vs. "Piece"
+       </h2>
+       <p class="text-slate-600 mb-8 text-base">
+        Depending on what material you choose, the math changes completely.
+       </p>
+       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div class="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm hover:border-blue-300 transition group">
+         <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mb-4">
+          <i class="fa-solid fa-layer-group">
+          </i>
+         </div>
+         <h4 class="font-bold text-slate-900 text-lg mb-2">
+          Vinyl Siding
+         </h4>
+         <p class="text-sm text-slate-600 mb-4">
+          Sold by the
+          <strong>
+           "Square"
+          </strong>
+          (100 sq. ft.).
+         </p>
+         <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-100 pt-4">
+          <li class="flex justify-between">
+           <span>
+            1 Square =
+           </span>
+           <span class="font-bold text-slate-900">
+            100 Sq. Ft.
+           </span>
+          </li>
+          <li class="flex justify-between">
+           <span>
+            1 Carton Usually Holds =
+           </span>
+           <span class="font-bold text-slate-900">
+            2 Squares
+           </span>
+          </li>
+          <li class="flex justify-between">
+           <span>
+            Waste Math:
+           </span>
+           <span class="font-bold text-slate-900">
+            Round UP to nearest box
+           </span>
+          </li>
+         </ul>
+        </div>
+        <div class="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm hover:border-orange-300 transition group">
+         <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 mb-4">
+          <i class="fa-solid fa-bars">
+          </i>
+         </div>
+         <h4 class="font-bold text-slate-900 text-lg mb-2">
+          Fiber Cement (Hardie)
+         </h4>
+         <p class="text-sm text-slate-600 mb-4">
+          Sold by the
+          <strong>
+           "Piece"
+          </strong>
+          (Individual 12' Boards).
+         </p>
+         <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-100 pt-4">
+          <li class="flex justify-between">
+           <span>
+            Standard Length =
+           </span>
+           <span class="font-bold text-slate-900">
+            12 Feet
+           </span>
+          </li>
+          <li class="flex justify-between">
+           <span>
+            Widths Available =
+           </span>
+           <span class="font-bold text-slate-900">
+            5.25", 6.25", 7.25", 8.25"
+           </span>
+          </li>
+          <li class="flex justify-between">
+           <span>
+            Waste Math:
+           </span>
+           <span class="font-bold text-slate-900">
+            Calculate pieces, add 15%
+           </span>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <h2 class="text-3xl font-black text-slate-900 mb-8 border-b-4 border-orange-600 inline-block">
+        The "Overlap Tax" (Reveal)
+       </h2>
+       <div class="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r-xl mb-8">
+        <p class="text-orange-900 text-sm font-medium leading-relaxed">
+         <strong>
+          The Rookie Mistake:
+         </strong>
+         You buy 8.25-inch siding thinking it covers 8.25 inches of wall.
+         <br/>
+         <strong>
+          The Reality:
+         </strong>
+         You must overlap the boards by 1.25 inches to keep water out. That means an 8.25" board only covers
+         <strong>
+          7 inches
+         </strong>
+         . This is called the "Reveal."
+        </p>
+       </div>
+       <div class="flex flex-col md:flex-row gap-8 mb-12 items-center">
+        <div class="md:w-1/2">
+         <figure>
+          <img alt="Diagram showing siding reveal and overlap" class="w-full h-auto rounded-3xl border border-slate-200 shadow-md" src="https://res.cloudinary.com/renocalchub/image/upload/f_auto,q_auto/lap-siding-cross-section-profile-with-overlap-and-reveal-dimensions_phtjq2.jpg"/>
+          <figcaption class="text-center text-xs text-slate-400 mt-2 italic">
+           The "Reveal" is the only part that counts. The top 1.25" is hidden (and nailed).
+          </figcaption>
+         </figure>
+        </div>
+        <div class="md:w-1/2">
+         <h4 class="font-bold text-slate-900 text-lg mb-4">
+          The Math Impact
+         </h4>
+         <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+          If you have a 10-foot tall wall (120 inches):
+         </p>
+         <ul class="space-y-3 text-sm">
+          <li class="flex items-center text-red-500">
+           <i class="fa-solid fa-xmark w-6">
+           </i>
+           <span>
+            Using 8.25" width: 120 / 8.25 = 14.5 rows (WRONG)
+           </span>
+          </li>
+          <li class="flex items-center text-green-600 font-bold">
+           <i class="fa-solid fa-check w-6">
+           </i>
+           <span>
+            Using 7" reveal: 120 / 7 = 17.1 rows (CORRECT)
+           </span>
+          </li>
+         </ul>
+         <p class="text-xs text-slate-500 mt-4 italic">
+          That is a difference of
+          <strong>
+           3 full rows
+          </strong>
+          of siding. If you use the total width, you will be short.
+         </p>
+        </div>
+       </div>
+       <h2 class="text-3xl font-black text-slate-900 mb-8 border-b-4 border-orange-600 inline-block">
+        The "Forgot-to-Buy" List
+       </h2>
+       <p class="text-slate-600 mb-8 text-base">
+        The siding covers the wall, but the accessories seal the edges. You cannot install siding without these.
+       </p>
+       <div class="space-y-4 mb-12">
+        <div class="bg-white border border-slate-200 p-4 rounded-xl flex items-start gap-4 shadow-sm">
+         <div class="bg-slate-100 rounded-lg h-12 w-12 flex items-center justify-center flex-shrink-0 text-slate-600 font-black text-lg">
+          J
+         </div>
+         <div>
+          <h5 class="font-bold text-slate-900">
+           J-Channel (Vinyl Only)
+          </h5>
+          <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+           Goes around every window, door, and where the siding meets the roof (soffit).
+           <br/>
+           <strong>
+            Rule:
+           </strong>
+           Measure perimeter of all openings + roof line. Add 10%.
+          </p>
+         </div>
+        </div>
+        <div class="bg-white border border-slate-200 p-4 rounded-xl flex items-start gap-4 shadow-sm">
+         <div class="bg-slate-100 rounded-lg h-12 w-12 flex items-center justify-center flex-shrink-0 text-slate-600 font-black text-lg">
+          <i class="fa-solid fa-arrow-up-from-bracket">
+          </i>
+         </div>
+         <div>
+          <h5 class="font-bold text-slate-900">
+           Starter Strip
+          </h5>
+          <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+           The invisible strip at the very bottom that the first row locks onto.
+           <br/>
+           <strong>
+            Rule:
+           </strong>
+           Measure the linear footage of the foundation.
+          </p>
+         </div>
+        </div>
+        <div class="bg-white border border-slate-200 p-4 rounded-xl flex items-start gap-4 shadow-sm">
+         <div class="bg-slate-100 rounded-lg h-12 w-12 flex items-center justify-center flex-shrink-0 text-slate-600 font-black text-lg">
+          <i class="fa-solid fa-vector-square">
+          </i>
+         </div>
+         <div>
+          <h5 class="font-bold text-slate-900">
+           Corner Posts
+          </h5>
+          <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+           Inside and Outside corners. They come in 10' or 12' lengths.
+           <br/>
+           <strong>
+            Rule:
+           </strong>
+           Count your corners. Buy one post per corner (don't try to piece two short ones together, it looks terrible).
+          </p>
+         </div>
+        </div>
+       </div>
+      </section>
+      <section class="max-w-3xl mx-auto py-10">
+       <h2 class="text-3xl font-black text-slate-900 mb-10 border-b-4 border-orange-600 inline-block">
+        Siding FAQ: The "Oops" Scenarios
+       </h2>
+       <div class="space-y-4 mb-20 text-sm">
+        <details class="group bg-white border border-slate-200 rounded-2xl p-6 cursor-pointer shadow-sm hover:border-orange-300 transition-all duration-300">
+         <summary class="font-black text-lg text-slate-900 flex justify-between items-center list-none">
+          What if I run short by just a few pieces?
+          <span class="group-open:rotate-180 transition-transform duration-500 bg-slate-50 h-8 w-8 rounded-full flex items-center justify-center border border-slate-100">
+           <i class="fa-solid fa-chevron-down text-slate-400 text-xs">
+           </i>
+          </span>
+         </summary>
+         <div class="text-slate-600 mt-6 pl-4 border-l-4 border-orange-600 leading-relaxed">
+          First, panic slightly. If you buy a new box, the color might not match perfectly (the "Dye Lot" issue).
+          <br/>
+          <br/>
+          <strong>
+           The Pro Fix:
+          </strong>
+          If the shortage is on the front of the house, go to the back of the house (or behind the AC unit). Carefully remove enough old/matching siding from there to finish the front. Then, use the new (mismatched) siding to patch the hidden area in the back.
+         </div>
+        </details>
+        <details class="group bg-white border border-slate-200 rounded-2xl p-6 cursor-pointer shadow-sm hover:border-orange-300 transition-all duration-300">
+         <summary class="font-black text-lg text-slate-900 flex justify-between items-center list-none">
+          Can I return unopened boxes?
+          <span class="group-open:rotate-180 transition-transform duration-500 bg-slate-50 h-8 w-8 rounded-full flex items-center justify-center border border-slate-100">
+           <i class="fa-solid fa-chevron-down text-slate-400 text-xs">
+           </i>
+          </span>
+         </summary>
+         <div class="text-slate-600 mt-6 pl-4 border-l-4 border-orange-600 leading-relaxed">
+          Usually, yes, if it's a "stock" color (White, Tan, Grey). But if you ordered a special color (Midnight Blue, Forest Green), there is often a **20-30% restocking fee**, or it might be non-returnable. Always check the return policy before ordering the "extra" 20%.
+         </div>
+        </details>
+        <details class="group bg-white border border-slate-200 rounded-2xl p-6 cursor-pointer shadow-sm hover:border-orange-300 transition-all duration-300">
+         <summary class="font-black text-lg text-slate-900 flex justify-between items-center list-none">
+          Why is my siding "waving" or buckling?
+          <span class="group-open:rotate-180 transition-transform duration-500 bg-slate-50 h-8 w-8 rounded-full flex items-center justify-center border border-slate-100">
+           <i class="fa-solid fa-chevron-down text-slate-400 text-xs">
+           </i>
+          </span>
+         </summary>
+         <div class="text-slate-600 mt-6 pl-4 border-l-4 border-orange-600 leading-relaxed">
+          You nailed it too tight. Vinyl expands and contracts with heat. You must leave the nail heads sticking out 1/16th of an inch so the panel can slide left and right. If you nail it flush, it will buckle when the sun hits it.
+         </div>
+        </details>
+       </div>
+       <div class="border-t-2 border-slate-100 pt-16 mt-16 text-center">
+        <h3 class="text-3xl font-black text-slate-900 mb-6 tracking-tight">
+         The Verdict
+        </h3>
+        <p class="mb-10 text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
+         It is better to have one extra box of siding sitting in your garage for 20 years than to be one piece short today. Storms happen. Grills melt siding. Kids hit baseballs. That extra box is your insurance policy. Measure gross, ignore the windows, and buy the extra box.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+         <a class="inline-flex items-center justify-center px-10 py-5 text-xs font-black text-white transition-all duration-300 bg-orange-600 rounded-full hover:bg-orange-700 hover:shadow-2xl shadow-orange-200 hover:-translate-y-1 uppercase tracking-widest" href="../../siding/">
+          Calculate Material List
+          <i class="fa-solid fa-arrow-up ml-3">
+          </i>
+         </a>
+         <a class="inline-flex items-center justify-center px-10 py-5 text-xs font-black text-slate-900 transition-all duration-300 bg-white border border-slate-200 rounded-full hover:bg-slate-50 hover:shadow-lg uppercase tracking-widest" href="/">
+          See All Tools
+         </a>
+        </div>
+       </div>
+      </section>
+     </article>
+    </div>
+    <aside class="lg:col-span-4 xl:col-span-3 mt-12 lg:mt-0">
+     <div id="related-sidebar">
+     </div>
+    </aside>
+   </div>
+  </main>
+  <div id="footer-placeholder">
+  </div>
+  <script src="/load-components.js">
+  </script>
+  <script src="/authors.js">
+  </script>
+  <script src="/articles.js">
+  </script>
+  <script src="/affiliates.js">
+  </script>
+  <script>
+   renderAuthor('miller', 'Jan 25, 2026', 'author-block');
+  </script>
+  <script defer="defer" src="/load-related.js">
+  </script>
+  <script src="/calculators.js">
+  </script>
+ </body>
+</html>
