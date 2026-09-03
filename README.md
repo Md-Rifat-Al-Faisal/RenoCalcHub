@@ -1,6 +1,6 @@
 # RenoCalcHub
 
-![Project Screenshot](./assets/screenshot.png)
+![Project Screenshot](./assets/Screenshot.png)
 
 ## 📖 Overview
 RenoCalcHub is a lightweight, lightning-fast static web application featuring a collection of over 27 practical construction and renovation calculators. Built from the ground up to solve real-world calculation problems efficiently, it provides a seamless user experience without relying on heavy CMS platforms or bloated frameworks.
